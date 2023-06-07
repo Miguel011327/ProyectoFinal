@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto_Final_MiguelCadenas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="wow.min.js" />
+    <script src="wow.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b309ff7634.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <script>
+      $(function () {
+        $("#slider4").responsiveSlides({
+          auto: false,
+          pager: false,
+          nav: true,
+          speed: 500,
+          namespace: "callbacks",
+          before: function () {
+            $(".events").append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $(".events").append("<li>after event fired.</li>");
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="ancho">
+      <div class="sandwich" id="icoMenu">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+      <nav id="menu" class="menu_princ">
+        <figure class="img_cabecera">
+          <img src="imagenes/logo-cabecera.png" alt="" />
+        </figure>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="ancho callbacks_container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="imagenes/slide1.webp" alt="" />
+          <div class="caption wow animate__animated animate__bounceInUp">
+            <h1>BETTER RELATIONSHIPS</h1>
+            <br />
+            <h3>BETWEEN PEOPLE AND DOGS</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus eaque laboriosam cupiditate labore dolor minima in nemo
+              quidem doloremque quam repellat voluptas adipisci pariatur et
+              tenetur, vero voluptate mollitia explicabo.
+            </p>
+            <br />
+            <a href="#" id="Btn">READ MORE</a>
+          </div>
+        </li>
+        <li>
+          <img src="imagenes/slide2.jpg" alt="" />
+          <div class="caption wow animate__animated animate__bounceInUp">
+            <h1>FIX YOUR DOG'S</h1>
+            <br />
+            <h3>BEHAVIOR PROBLEMS</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus eaque laboriosam cupiditate labore dolor minima in nemo.
+            </p>
+            <br />
+            <a href="#" id="Btn">READ MORE</a>
+          </div>
+        </li>
+        <li>
+          <img src="imagenes/slide3.jpg" alt="" />
+          <div class="caption wow animate__animated animate__bounceInUp">
+            <h1>PROVIDING ALL TYPES</h1>
+            <br />
+            <h3>OF TRAINING FOR YOUR DOG</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusamus eaque laboriosam cupiditate labore dolor minima in nemo.
+            </p>
+            <br />
+            <a href="#" id="Btn">READ MORE</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section id="modal" class="fondomodal">
+      <div class="contenidomodal">
+        <div class="estructuramodal">
+          <h3>Registro de usuario</h3>
+          <i id="cerrarbtn" class="cerrarmodal fas fa-times-circle"></i>
+        </div>
+        <form class="formulario" action="procesar_registro.php" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="contrasena">Contraseña:</label>
+          <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            required
+          /><br /><br />
+
+          <label for="confirmar_contrasena">Confirmar Contraseña:</label>
+          <input
+            type="password"
+            id="confirmar_contrasena"
+            name="confirmar_contrasena"
+            required
+          /><br /><br />
+
+          <input type="submit" value="Registrarse" />
+        </form>
+      </div>
+    </section>
+    <section class="ancho cuerpo1">
+      <article class="articulos1 wow animate__animated animate__backInLeft">
+        <h1><span>01/</span>PERSONAL TRAINING</h1>
+        <figure class="zoom1">
+          <img src="imagenes/c1_1.jpg" alt="" />
+        </figure>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+          doloremque aperiam eligendi, officia quaerat aspernatur perspiciatis,
+          incidunt magnam omnis placeat perferendis dolore totam aliquid sequi
+          tenetur ab quia quam mollitia?
+        </p>
+        <a href="#">READ MORE</a>
+      </article>
+      <article class="articulos1 wow animate__animated animate__backInUp">
+        <h1><span>02/</span>GROUP TRAINING</h1>
+        <figure class="zoom1">
+          <img src="imagenes/c1_2.jpg" alt="" />
+        </figure>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+          doloremque aperiam eligendi, officia quaerat aspernatur perspiciatis,
+          incidunt magnam omnis placeat perferendis dolore totam aliquid sequi
+          tenetur ab quia quam mollitia?
+        </p>
+        <a href="#">READ MORE</a>
+      </article>
+      <article class="articulos1 wow animate__animated animate__backInRight">
+        <h1><span>03/</span>BOARD & TRAIN</h1>
+        <figure class="zoom1">
+          <img src="imagenes/c1_3.jpg" alt="" />
+        </figure>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+          doloremque aperiam eligendi, officia quaerat aspernatur perspiciatis,
+          incidunt magnam omnis placeat perferendis dolore totam aliquid sequi
+          tenetur ab quia quam mollitia?
+        </p>
+        <a href="#">READ MORE</a>
+      </article>
+    </section>
+    <div class="ancho divisor wow animate__animated animate__backInUp">
+      <h1>WHY CHOOSE US</h1>
+    </div>
+    <section class="ancho cuerpo2">
+      <div class="contsim">
+        <article class="articulo2 wow animate__animated animate__backInUp">
+          <div class="tfont">
+            <div><i class="fa-solid fa-bowl-food"></i></div>
+            <h3>CERTIFIED COACHES</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            quae, molestiae dolore quidem veritatis consequatur officiis
+            praesentium vel.
+          </p>
+        </article>
+        <article class="articulo2 wow animate__animated animate__backInUp">
+          <div class="tfont">
+            <div><i class="fa-solid fa-dog"></i></div>
+            <h3>CUSTOMIZABLE PROGRAMS</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            quae, molestiae dolore quidem veritatis consequatur officiis
+            praesentium vel.
+          </p>
+        </article>
+        <article class="articulo2 wow animate__animated animate__backInUp">
+          <div class="tfont">
+            <div><i class="fa-solid fa-briefcase"></i></div>
+            <h3>EFFICIENT TRAINING</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            quae, molestiae dolore quidem veritatis consequatur officiis
+            praesentium vel.
+          </p>
+        </article>
+      </div>
+      <div class="contsim">
+        <article class="articulo2 wow animate__animated animate__backInUp">
+          <div class="tfont">
+            <div><i class="fa-solid fa-bone"></i></div>
+            <h3>YEARS OF EXPERTISE</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            quae, molestiae dolore quidem veritatis consequatur officiis
+            praesentium vel.
+          </p>
+        </article>
+        <article class="articulo2 wow animate__animated animate__backInUp">
+          <div class="tfont">
+            <div><i class="fa-solid fa-medal"></i></div>
+            <h3>LOTS OF POSITIVE REVIEWS</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            quae, molestiae dolore quidem veritatis consequatur officiis
+            praesentium vel.
+          </p>
+        </article>
+        <article class="articulo2 wow animate__animated animate__backInUp">
+          <div class="tfont">
+            <div><i class="fa-solid fa-paw"></i></div>
+            <h3>PERSONALIZED APPROACH</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            quae, molestiae dolore quidem veritatis consequatur officiis
+            praesentium vel.
+          </p>
+        </article>
+      </div>
+    </section>
+    <div class="ancho divisor wow animate__animated animate__backInUp">
+      <h1>LATEST NEWS</h1>
+    </div>
+    <section class="ancho cuerpo3">
+      <div class="contbnr">
+        <article class="banner1 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">CHEWING, PUPPY MOUTHING, AND DOG BITES</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+        <article class="banner2 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">THE HOW'S OF CREATE TRAINING YOUR DOG</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+        <article class="banner3 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">A TIRED DOG IS A GOOD DOG</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+        <article class="banner4 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">BASIC DOG GROOMING</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="contbnr">
+        <article class="banner5 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">THE MANY WAYS A LEASH GETS IN THE WAY</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+        <article class="banner6 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">WHY AREN'T SOME DOGS WALKED REGULARLY?</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+        <article class="banner7 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">WHAT IS THE BEST FOG FOOD?</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+        <article class="banner8 wow animate__animated animate__flipInY">
+          <div class="info1">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>November 25,2019</p>
+          </div>
+          <a href="#">THE DANGERS OF DOG COLLARS</a>
+          <div id="info2">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              unde inventore, tempora eius ex facere odit nostrum, natus ducimus
+              omnis doloribus a mollitia consectetur. Distinctio at autem ad ut
+              sit.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="ancho cuerpo4">
+      <div class="lista wow animate__animated animate__backInUp">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="#"> WHO WE ARE</a></li>
+          <li><a href="#">OUR HISTORY</a></li>
+          <li><a href="#">WHAT WE DO</a></li>
+          <li><a href="#">OUR PROGRAMS</a></li>
+          <li><a href="#">OUR TEAM</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">TRAINING TIPS</a></li>
+        </ul>
+      </div>
+      <div class="lista wow animate__animated animate__backInUp">
+        <h3>SERVICES</h3>
+        <ul>
+          <li><a href="#">PRIVATE TRAINING</a></li>
+          <li><a href="#">GROUP TRAINING</a></li>
+          <li><a href="#">WORKSHOPS</a></li>
+          <li><a href="#">SEMINARS</a></li>
+          <li><a href="#">DOG BOARDING</a></li>
+          <li><a href="#">PET CARE</a></li>
+        </ul>
+      </div>
+      <div class="lista wow animate__animated animate__backInUp">
+        <h3>QUICK LINKS</h3>
+        <ul>
+          <li><a href="#">EVENTS</a></li>
+          <li><a href="#">TIPS</a></li>
+          <li><a href="#">SCHEDULE</a></li>
+          <li><a href="#">RESOURCES</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">GET IN TOUCH</a></li>
+        </ul>
+      </div>
+      <div class="lista wow animate__animated animate__backInUp">
+        <h3>CONTACTS</h3>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-phone"></i> 800-2345-6789</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-house"></i> 4578 MARMORA ROAD, GLASGOW D04
+              89GR</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-regular fa-clock"></i> 9AM-6PM PST M-TH; 9AM-3PM PST
+              FRI</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-regular fa-envelope"></i>
+              E-MAIL:INFO@DEMOLINK.ORG</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="ancho cuerpo5">
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.621375946752!2d-89.70559657680971!3d20.993799258841253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f560ca969dffa95%3A0x338a0bba35019da9!2zQy4gNzHhtKwgNzA4LCBDZCBDYXVjZWwsIDk3MzE0IE3DqXJpZGEsIFl1Yy4!5e0!3m2!1ses-419!2smx!4v1686136311971!5m2!1ses-419!2smx"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <footer class="ancho">
+      <div>
+        <p>@Miguel Cadenas</p>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      var fondomodal = document.getElementById("modal");
+      var btn = document.getElementById("Btn");
+      var cerrar = document.getElementById("cerrarbtn");
+
+      function tiempo() {
+        fondomodal.style.display = "block";
+      }
+      setTimeout(tiempo, 5000);
+
+      btn.onclick = function () {
+        fondomodal.style.display = "block";
+      };
+      cerrar.onclick = function () {
+        fondomodal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == fondomodal) {
+          fondomodal.style.display = "none";
+        }
+      };
+    </script>
+    <script>
+      $("#icoMenu").click(function () {
+        $("#menu").toggleClass("abrirmenu");
+      });
+    </script>
+  </body>
+</html>
