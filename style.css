@@ -421,6 +421,10 @@ header .sandwich {
 .lista a:hover{
     color: black;
 }
+.mapa{
+    width:100%;
+    height:450px;
+}
 footer{
     background-color: #333;
     padding: 50px;
@@ -673,21 +677,20 @@ footer p{
     .menu_princ figure{
         display: none;
     }
-    .sandwich {
+    header .sandwich {
         display: inline-block;
     }
     .sandwich i {
         display: inline-block;
         color: white;
-        font-size: 10px;
+        font-size: 25px;
         margin: 10px;
         padding: 5px;
     }
     header nav {
-        display: block;
+        display: inline-block;
         position: absolute;
         width: 100%;
-        left: 0%;
         background-color: rgba(200, 200, 200, .7);
         top: 100%;
         left: -100%;
